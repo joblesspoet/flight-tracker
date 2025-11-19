@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flight Tracker
+
+A premium, real-time flight tracking application built with Next.js and Tailwind CSS.
+
+![Flight Tracker Preview](/screenshots/app-preview.png)
+
+## Features
+
+-   **Real-time Flight Status**: Instant lookup of flight times, terminals, and status (On Time, Delayed, Cancelled).
+-   **Premium UI**: Glassmorphism design with smooth animations and a responsive layout.
+-   **Dual Data Source**:
+    -   **Mock Data**: Comes with a rich dataset of 50+ realistic flights for immediate testing.
+    -   **Live API**: Built-in support for [AviationStack](https://aviationstack.com/) (free tier supported).
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   Node.js 18+
+-   npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/joblesspoet/flight-tracker.git
+    cd flight-tracker
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-## Learn More
+3.  Run the development server:
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Using Real Data (Optional)
 
-## Deploy on Vercel
+To use live flight data, obtain a free API key from [AviationStack](https://aviationstack.com/) and add it to your environment variables.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Create a `.env.local` file in the root directory.
+2.  Add your key:
+    ```env
+    AVIATION_STACK_KEY=your_api_key_here
+    ```
+3.  Restart the server. The app will automatically switch to fetching real data, falling back to mock data if the API limit is reached or the request fails.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+-   **Framework**: Next.js 15 (App Router)
+-   **Styling**: Tailwind CSS v4
+-   **Language**: TypeScript
+-   **Font**: Inter (Google Fonts)
+
+## Example Flights to Try
+
+If you are running in Mock Data mode, try searching for these flight numbers:
+
+-   **AA100** (New York -> London)
+-   **SQ23** (New York -> Singapore)
+-   **LH401** (New York -> Frankfurt)
+-   **QF12** (Los Angeles -> Sydney)
+-   **DL405** (New York -> Paris)
