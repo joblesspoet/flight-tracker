@@ -2,7 +2,7 @@
 
 A premium, real-time flight tracking application built with Next.js and Tailwind CSS.
 
-![Flight Tracker Preview](/screenshots/app-preview.png)
+![Flight Tracker Preview](public/screenshots/app-preview.png)
 
 ## Features
 
